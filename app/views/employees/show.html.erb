@@ -1,0 +1,16 @@
+<h1><%= @employee.name %></h1>
+<p>Department: <%= @employee.department.name %></p>
+
+<h2>All Tickets</h2>
+<ul id="tickets">
+  <% @tickets.each do |ticket| %>
+    <li><%= ticket.subject %> - <%= ticket.age %></li>
+  <% end %>
+</ul>
+
+<h2>Oldest Ticket</h2>
+<% if @oldest_ticket %>
+  <p><%= @oldest_ticket.subject %> - <%= @oldest_ticket.age %></p>
+<% else %>
+  <p>No tickets found.</p>
+<% end %>
