@@ -23,7 +23,7 @@ RSpec.describe "The Departments Index Page" do
 
   it "shows the employees under each department" do
     visit "/departments"
-    save_and_open_page
+    # save_and_open_page
     within("#Department-Appliances") do
       expect(page).to have_content("Staff: Juanita Facundo Meghan")
     end
