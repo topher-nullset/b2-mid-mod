@@ -44,7 +44,7 @@ RSpec.describe "Employees Show Page" do
     # save_and_open_page
     fill_in "Ticket", with: @ticket_3.id
     click_button "Submit"
-    save_and_open_page
+    # save_and_open_page
     expect(page).to have_content("Where is Waldo? - 3")
   end
 end
