@@ -14,3 +14,10 @@
 <% else %>
   <p>No tickets found.</p>
 <% end %>
+
+<h2>Add a Ticket</h2>
+<%= form_with url: "/employees/#{@employee.id}", method: :post do |form| %>
+  <%= form.label :ticket_id %>
+  <%= form.number_field :ticket_id %> 
+  <%= form.submit "Submit" %>
+<% end %>
